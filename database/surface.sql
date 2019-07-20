@@ -19,6 +19,15 @@ CREATE TABLE surface_user(
     gender INT
 );
 
+-- 笔记本电脑型号表
+CREATE TABLE surface_laptop_family(
+    fid INT PRIMARY KEY AUTO_INCREMENT,
+    fname VARCHAR(32)
+);
+-- 笔记本电脑列表
+CREATE TABLE surface_laptop(
+    
+);
 
 -- 数据导入====>
 
