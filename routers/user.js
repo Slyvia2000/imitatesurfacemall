@@ -95,5 +95,27 @@ router.get('/detail',function(req,res){
 });
 
 // 2.5 用户列表查询
+router.get('/list',function(req,res){
+    // 获取请求数据
+    var obj=req.query;
+    // 将传递的值转为整型
+    obj.pno=parseInt(obj.pno);
+    obj.count=parseInt(obj.count);
+    // 验证数据如果为空，设置默认值
+    if(!obj.pno) obj.pno=1;
+    if(!obj.count) obj.count=3;
+    // 连接数据库
+    var start=(obj.pno-1)*obj.count
+    var sql='SELECT * FROM surface_user LIMIT ?,?';
+    pool.query(sql,[start,obj.count],function(err,result){
+        if(err) throw err;
+        res.send(result);
+    })
+});
+
+// 2.6 删除用户
+
+
+
 // 3 导出路由器对象
 module.exports=router;
