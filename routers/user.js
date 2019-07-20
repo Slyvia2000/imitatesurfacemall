@@ -81,5 +81,19 @@ router.get('/update',function(req,res){
     })
 });
 
+// 2.4 用户检索
+router.get('/detail',function(req,res){
+    // 获取请求数据
+    var obj=req.query;
+    // 验证数据是否为空
+    if(!obj.uid){ res.send({code:401,msg:'uid required'}); return; };
+    // 连接数据库
+    pool.query('SELECT * FROM surface_user WHERE uid=?',[obj.uid],function(err,result){
+        if(err) throw err;
+        res.send(result);
+    })
+});
+
+// 2.5 用户列表查询
 // 3 导出路由器对象
 module.exports=router;
