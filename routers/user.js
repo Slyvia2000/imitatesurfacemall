@@ -114,7 +114,23 @@ router.get('/list',function(req,res){
 });
 
 // 2.6 删除用户
+router.get('/delete',function(req,res){
+    // 获取请求的数据
+    var obj=req.query;
+    // 验证数据是否为空
+    if(!obj.uid){ res.send({code:401,msg:'uid required'}); return; };
+    // 连接数据库
+    var sql='DELETE FROM surface_user WHERE uid=?'
+    pool.query(sql,[obj.uid],function(err,result){
+        if(err) throw err;
+        if(result.affectedRows>0){
+            res.send({code:200,msg:'delete suc'});
+        }else{
+            res.send({code:301,msg:'delete err'});
+        };
+    });
 
+})
 
 
 // 3 导出路由器对象
