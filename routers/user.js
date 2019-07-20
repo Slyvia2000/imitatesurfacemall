@@ -48,7 +48,38 @@ router.post('/login',function(req,res){
 });
 
 // 2.3 用户信息修改
-
+router.get('/update',function(req,res){
+    // 获取请求的数据
+    var obj=req.query;
+    // 验证数据是否为空
+    // 版本1
+    /*
+    if(!obj.uid){ res.send({code:401,msg:'uid required'}); return;}
+    if(!obj.phone){ res.send({code:402,msg:'phone required'}); return;}
+    if(!obj.email){ res.send({code:403,msg:'email required'}); return;}
+    if(!obj.user_name){ res.send({code:404,msg:'user_name required'}); return;}
+    if(!obj.gender){ res.send({code:405,msg:'gender required'}); return;}
+    */
+    // 版本2：遍历对象进行验证
+    var n=400;
+    for(var key in obj){
+        n++;
+        if(!obj[key]){
+            res.send({code:n,msg:`${key} required`});
+            return;
+        };
+    };
+    // 连接数据库
+    var sql='UPDATE surface_user SET phone=?,email=?,user_name=?,gender=? WHERE uid=?'
+    pool.query(sql,[obj.phone,obj.email,obj.user_name,obj.gender,obj.uid],function(err,result){
+        if(err) throw err;
+        if(result.affectedRows>0){
+            res.send({code:200,msg:'update suc'});
+        }else{
+            res.send({code:301,msg:'update err'});
+        }
+    })
+});
 
 // 3 导出路由器对象
 module.exports=router;
