@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        table{
+            width:800px;
+            border:1px solid #000;
+        }
+    </style>
+</head>
+<body onload='loadUser()'>
+    <table>
+        <thead>
+            <tr>
+                <th>登录名称</th>
+                <th>电子邮箱</th>
+                <th>联系方式</th>
+                <th>用户姓名</th>
+                <th>用户性别</th>
+                <th>操作</th>
+            </tr>
+        </thead>
+        <tbody id='content'></tbody>
+    </table>
+    <script>
+        function loadUser(){
+            // 1 创建xhr异步对象
+            var xhr=new XMLHttpRequest();
+            // 4 监听接收响应数据
+            xhr.onreadystatechange=function(){
+                if(xhr.readyState==4 && xhr.status==200){
+                    var result=xhr.responseText;
+                    // json解析，得到js对象数组
+                    var users=JSON.parse(result);
+                    console.log(users)
+                    // ====>7/12 15:00
+                };
+            };
+            // 2 打开连接
+            xhr.open('get','http://127.0.0.1:8080/ajax/list',true);
+            // 3 发送请求
+            xhr.send();
+        };
+    </script>
+</body>
+</html>

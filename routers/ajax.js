@@ -30,6 +30,17 @@ router.post('/login',(req,res)=>{
     });
 });
 
+// 2.2 用户列表查询
+router.get('/list',(req,res)=>{
+    // 查询数据库
+    var sql='SELECT * FROM surface_user';
+    pool.query(sql,(err,result)=>{
+        if(err) throw err;
+        res.send(result);
+    });
+});
+
+
 
 // 3 导出路由器对象
 module.exports=router;
