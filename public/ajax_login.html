@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        用户：<input id='uname' placeholder='请输入用户名' type="text">
+    </div>
+    <div>
+        密码：<input id='upwd' placeholder='请输入密码' type="password">
+    </div>
+    <div>
+        <button onclick='login()'>登录</button>
+    </div>
+    <script>
+        function login(){
+            // 获取用户名和密码
+            var u_name=uname.value;
+            var u_pwd=upwd.value;
+            // 1 创建xhr异步对象
+            var xhr=new XMLHttpRequest();
+            // 4 监听获取响应数据
+            xhr.onreadystatechange=function(){
+                if(xhr.readyState==4 && xhr.status==200){
+                    var result=xhr.responseText;
+                    console.log(result);
+                    if(result.code==200){
+                        alert('登录成功');
+                    };
+                };
+            };
+            // 2 打开连接，创建请求
+            xhr.open('post','http://127.0.0.1:8080/ajax/login',true);
+            // 3 发送请求
+            // 3.1 创建请求主体
+            // var formdata=`uname=${u_name}&upwd=${u_pwd}`;
+            var formdata='uname='+u_name+'&upwd='+u_pwd;
+            // 3.2 设置请求消息头
+            xhr.setRequestHeader('Content-Type','application/x-www-form-urlencoded');
+            xhr.send(formdata);
+        }
+    </script>
+</body>
+</html>

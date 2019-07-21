@@ -2,6 +2,7 @@
 const express=require('express');
 // 引入路由器
 const userRouter=require('./routers/user.js');
+const ajaxRouter=require('./routers/ajax.js');
 // 引入body-parser
 const bodyParser=require('body-parser');
 
@@ -17,5 +18,6 @@ server.use( bodyParser.urlencoded({
     extended:false
 }) );
 
-// 使用路由器
+// 使用/挂载路由器
 server.use('/user',userRouter);
+server.use('/ajax',ajaxRouter);

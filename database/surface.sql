@@ -68,3 +68,7 @@ INSERT INTO surface_laptop_family VALUES
 (NULL,'Surface Pro'),
 (NULL,'Surface Book'),
 (NULL,'Surface Studio');
+
+-- 笔记本电脑
+INSERT INTO surface_laptop VALUES
+(NULL,),
