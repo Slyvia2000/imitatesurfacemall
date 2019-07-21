@@ -50,6 +50,8 @@ CREATE TABLE surface_laptop(
     is_onsale BOOLEAN           #是否促销中
 );
 
+
+
 -- 数据导入====>
 
 -- 用户信息
@@ -58,3 +60,11 @@ INSERT INTO surface_user VALUES
 (NULL, 'dangdang', '123456', 'dang@qq.com', '13501234568', 'img/avatar/default.png', '林当', '1'),
 (NULL, 'doudou', '123456', 'dou@qq.com', '13501234569', 'img/avatar/default.png', '窦志强', '1'),
 (NULL, 'yaya', '123456', 'ya@qq.com', '13501234560', 'img/avatar/default.png', '秦小雅', '0');
+
+-- 笔记本电脑型号
+INSERT INTO surface_laptop_family VALUES
+(NULL,'Surface Go'),
+(NULL,'Surface Laptop'),
+(NULL,'Surface Pro'),
+(NULL,'Surface Book'),
+(NULL,'Surface Studio');
