@@ -1,0 +1,41 @@
+/* 手写媒体查询 */
+/* 中屏 */
+/*
+@media screen and (max-width:991px) {
+    .par1{ padding-left:60rem; }
+    .par2{ padding-left:60rem; }
+    .par3{ padding-left:60rem; }
+    .par4{ padding-left:60rem; }
+}
+*/
+/* 小屏 */
+/*
+@media screen and (max-width:767px) {
+    .par1{ padding-left:15rem}
+    .par2{ padding-left:15rem}
+    .par3{ padding-left:15rem}
+    .par4{ padding-left:15rem}
+}
+*/
+/* 小屏 */
+@media screen and (max-width:767px){
+    .part1{padding-left:9rem}
+    .part2{padding-left:9rem}
+    .part3{padding-left:9rem}
+    .part4{padding-left:9rem}
+}
+/* 中屏 */
+@media screen and (min-width:768px) and (max-width:991px){
+    .part1{padding-left:9rem}
+    .part2{padding-left:9rem}
+    .part3{padding-left:9rem}
+    .part4{padding-left:9rem}
+
+}
+/* 大屏 */
+@media screen and (min-width:992px){
+    .part1{padding-left:3rem}
+    .part2{padding-left:3rem}
+    .part3{padding-left:3rem}
+    .part4{padding-left:3rem}
+}
