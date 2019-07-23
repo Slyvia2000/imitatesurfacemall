@@ -13,7 +13,7 @@
 /* 大屏 */
 @media screen and (min-width:992px){
     .my_header{ height:8rem; }
-    .my_footer{ height:16rem; }
+    .my_footer{ height:18rem; }
 }
 
 /* 重写轮播图指示器样式 */
@@ -37,4 +37,31 @@
 }
 .carousel-control-next{
     right:3%;
+}
+
+/* 推荐商品样式 */
+/* 图片尺寸 */
+.commend_img{
+    width:35rem;
+}
+/* 标题样式 */
+.commend_title{
+    font-size:1.17rem;
+    font-weight:bold;
+}
+/* 副标题样式 */
+.commend_sub_title{
+    font-size:0.9rem;
+}
+/* 底部推荐标题样式 */
+.commend_title_bottom{
+    font-size:1.17rem;
+    font-weight:bold;
+    text-align:center;
+}
+/* 底部推荐副标题样式 */
+.commend_sub_title_bottom{
+    font-size:0.9rem;
+    text-align:center;
+    margin-bottom:6rem;
 }
