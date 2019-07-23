@@ -26,10 +26,10 @@
 }
 /* 中屏 */
 @media screen and (min-width:768px) and (max-width:991px){
-    .part1{padding-left:9rem}
-    .part2{padding-left:9rem}
-    .part3{padding-left:9rem}
-    .part4{padding-left:9rem}
+    .part1{padding-left:3rem}
+    .part2{padding-left:3rem}
+    .part3{padding-left:3rem}
+    .part4{padding-left:3rem}
 
 }
 /* 大屏 */

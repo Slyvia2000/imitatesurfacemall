@@ -1,14 +1,17 @@
+.my_header,.my_footer{ width:100%; }
 /* 手写媒体查询，控制iframe的宽高 */
 /* 小屏 */
 @media screen and (max-width:767px){
-
+    .my_header{ height:12rem; }
+    .my_footer{ height:45rem; }
 }
 /* 中屏 */
 @media screen and (min-width:768px) and (max-width:991px){
-
-
+    .my_header{ height:12rem; }
+    .my_footer{ height:30rem; }
 }
 /* 大屏 */
 @media screen and (min-width:992px){
-
+    .my_header{ height:8rem; }
+    .my_footer{ height:16rem; }
 }
