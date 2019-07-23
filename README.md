@@ -40,4 +40,6 @@
 * 商品删除
 
 ### 前端
-* 轮播图文字部分
+* header.html
+* foorer.html
+* index.html
