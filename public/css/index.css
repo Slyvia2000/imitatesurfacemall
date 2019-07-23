@@ -16,4 +16,25 @@
     .my_footer{ height:16rem; }
 }
 
-/* 重写轮播指示器样式 */
+/* 重写轮播图指示器样式 */
+.carousel-indicators li{
+    background-color:#222
+}
+.carousel-indicators li.active{
+    background-color:#aaa
+}
+
+/* 重写轮播图左右箭头样式 */
+.carousel-control-prev,
+.carousel-control-next{
+    width:5%;height:13%;
+    top:40%;
+    background-color:rgba(0,0,0,0.3);
+    border-radius:50%;
+}
+.carousel-control-prev{
+    left:3%;
+}
+.carousel-control-next{
+    right:3%;
+}
