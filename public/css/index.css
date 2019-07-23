@@ -1,4 +1,3 @@
-.my_header,.my_footer{ width:100%; }
 /* 手写媒体查询，控制iframe的宽高 */
 /* 小屏 */
 @media screen and (max-width:767px){
