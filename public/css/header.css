@@ -1,3 +1,4 @@
 /* 面包屑导航样式 */
 .breadcrumb-item+.breadcrumb-item::before{ content:'|'; }
 .breadcrumb{ background-color:transparent; }
+a.navbar-brand{ color:#212529}
