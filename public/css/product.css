@@ -1,0 +1,30 @@
+body{
+    box-sizing:border-box;
+}
+/* 图片宽度 */
+.product_img{
+    width:100%;
+}
+
+/* 产品标题 */
+.product_title{
+    font-weight:bold
+}
+
+/* 容器下外边距 */
+.container{
+    margin-bottom:6rem;
+}
+
+/* 价格 */
+.product_price{
+    color:#ec5412;
+    font-size:1.3rem;
+}
+
+/* 单个产品 */
+.row>div{
+    padding:2rem;
+    /* margin:0.5rem; */
+    border:1px solid #ddd
+}

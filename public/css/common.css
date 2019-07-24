@@ -2,6 +2,8 @@
 *{ margin:0;padding:0 }
 body{ background:#f2f2f2; }
 
+/* iframe宽度设置 */
+.my_header,.my_footer{ width:100%; }
 /* 手写媒体查询，控制iframe的宽高 */
 /* 小屏 */
 @media screen and (max-width:767px){
@@ -21,6 +23,3 @@ body{ background:#f2f2f2; }
 
 /* 通用字号 */
 .my_small{ font-size:0.8rem; }
-
-/* iframe宽度设置 */
-.my_header,.my_footer{ width:100%; }
