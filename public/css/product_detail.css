@@ -1,0 +1,17 @@
+/* 面包屑导航 */
+.breadcrumb{
+    background-color:transparent;
+}
+
+/* 图片 */
+.img_m{
+    width:100%;
+}
+.img_s{
+    width:6rem;
+}
+
+.img_list{
+    width:100%;
+    overflow:hidden;
+}

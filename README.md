@@ -26,10 +26,15 @@
 * 用户删除路由
 
 ## 前端
-* 
+* header.html
+* foorer.html
+* index.html
+* product_list.html
+* product_detail.html
 
 # 待完善
 * ajax.html 行号:40  7/12 15:00
+* product_list 分页条
 
 #待添加
 ### 商品模块
@@ -39,9 +44,7 @@
 * 商品修改
 * 商品删除
 
-### 前端
-* header.html
-* foorer.html
-* index.html
+
+
 ## CSS
 * 鼠标悬停图片放大效果
