@@ -47,3 +47,16 @@
     color:#fff;
     background-color:#333;
 }
+
+/* 规格参数 */
+h2{
+    margin-top:2rem;
+}
+.d1{
+    width:10rem;
+    /* border-bottom:1px solid #ddd; */
+}
+td{
+    height:4rem;
+    border-top:1px solid #ddd;
+}
