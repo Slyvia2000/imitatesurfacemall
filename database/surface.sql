@@ -31,23 +31,33 @@ CREATE TABLE surface_laptop(
     title VARCHAR(128),         #主标题
     subtitle VARCHAR(128),      #副标题
     price DECIMAL(10,2),        #价格
-    promise VARCHAR(64),        #服务承诺
     spec VARCHAR(64),           #规格/颜色
 
-    Iname VARCHAR(32),          #商品名称
-    os VARCHAR(32),             #操作系统
+    size VARCHAR(32),           #尺寸
+    disk_size VARCHAR(32),      #存储
+    screen VARCHAR(64),         #显示器
+    support VARCHAR(32),        #外部支持
     memory VARCHAR(32),         #内存容量
-    resolution VARCHAR(32),     #分辨率
     video_card VARCHAR(32),     #显卡型号
     cpu VARCHAR(32),            #处理器
-    video_memory VARCHAR(32),   #显存容量
-    category VARCHAR(32),       #所属分类
-    disk VARCHAR(32),           #硬盘容量及类型
-    details VARCHAR(1024),      #产品详细说明
-
-    shelf_time BIGINT,          #上架时间
-    sold_count INT,             #已售出的数量
-    is_onsale BOOLEAN           #是否促销中
+    extra VARCHAR(64),          #连接和拓展
+    safety_pro VARCHAR(64),     #安全性
+    video VARCHAR(32),          #摄像头、视频 和音频
+    software  VARCHAR(64),      #软件
+    wifi   VARCHAR(64),         #无线
+    key_press VARCHAR(64),      #按键
+    components VARCHAR(32),     #包装清单
+    pro_service  VARCHAR(32),   #保修
+    image1_s  VARCHAR(128),
+    image2_s  VARCHAR(128),
+    image3_s  VARCHAR(128),
+    image4_s  VARCHAR(128),
+    image5_s  VARCHAR(128),
+    image1_m  VARCHAR(128),
+    image2_m  VARCHAR(128),
+    image3_m  VARCHAR(128),
+    image4_m  VARCHAR(128),
+    image5_m  VARCHAR(128)
 );
 
 
@@ -70,5 +80,5 @@ INSERT INTO surface_laptop_family VALUES
 (NULL,'Surface Studio');
 
 -- 笔记本电脑
-INSERT INTO surface_laptop VALUES
-(NULL,),
+-- INSERT INTO surface_laptop VALUES
+-- (NULL,),
